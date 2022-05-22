@@ -1,10 +1,9 @@
 import './App.css';
-import ListofNumbers from './components/PhoneNumberInput/ListofNumbers';
-
+import Spinner from './components/Spinner';
 function App() {
   return (
     <div>
-      <ListofNumbers />
+      <Spinner />
     </div>
   );
 }
