@@ -1,9 +1,11 @@
-import './App.css';
-import Spinner from './components/Spinner';
+import "./App.css";
+import NeonButton from "./components/NeonButton";
+
+
 function App() {
   return (
     <div>
-      <Spinner />
+      <NeonButton />
     </div>
   );
 }

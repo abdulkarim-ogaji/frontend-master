@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+}
+
+.neonButton {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--clr-neon);
+  border: 0.125em solid var(--clr-neon);
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.5), 0 0 0.25em var(--clr-neon);
+  box-shadow: 0 0 0.5em 0 var(--clr-neon), inset 0 0 0.5em 0 var(--clr-neon);
+  position: relative;
+  transition: background-color 100ms linear;
+}
+
+/* blur at the bottom */
+.neonButton::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--clr-neon);
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+/* hover effect */
+.neonButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.neonButton:hover,
+.neonButton:focus {
+  outline: none;
+  background-color: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neonButton:hover::after,
+.neonButton:focus::after,
+.neonButton:hover::before,
+.neonButton:focus::before {
+  opacity: 1;
+}

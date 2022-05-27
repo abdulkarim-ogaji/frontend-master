@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.textarea {
+  border: 2px solid black;
+  width: 400px;
+  padding: 1rem 0;
+  padding-left: 1rem;
+}
