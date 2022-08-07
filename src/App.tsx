@@ -1,11 +1,18 @@
 import "./App.css";
 import NeonButton from "./components/NeonButton";
-
+import TiltingCard from "./components/TiltingCard";
 
 function App() {
   return (
-    <div>
-      <NeonButton />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <TiltingCard />
     </div>
   );
 }
